@@ -27,31 +27,59 @@ function randomIntFromInterval(min,max) {
 }
 
 
-let api = "https://dog.ceo/api/breeds/image/random";
+
+let dogAPI = "https://dog.ceo/api/breeds/image/random";
+let catAPI = "https://api.thecatapi.com/v1/images/search?mime_types=jpg,png";
+let cors = "https://shielded-sea-59072.herokuapp.com/";
+let catImage;
+fetch(cors + catAPI, {mode: "cors"})
+    .then(
+        function (response) {
+            // Examine the text in the response
+            response.json().then(function (data) {
+                catImage = data[0].url;
+
+
+                //document.querySelector("body").style.background = 'url("'+data.message+'")';
+
+
+            });
+        }
+    )
+    .catch(function (err) {
+        console.log('Fetch Error :-S', err);
+    });
+
 let images = [];
 //Lien vers mon serveur heroku qui enable les cors à coup sûr
-let cors = "https://shielded-sea-59072.herokuapp.com/";
+
 //let divs = document.querySelectorAll("div");
 
-let divs = [][];
-let w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-let h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-
 //Entre 18 et 25 images par ligne
-let randomDivsNumber = randomIntFromInterval(18,25);
-let randomSectionNumber = randomIntFromInterval(7,10);
+let randomDivsNumber = randomIntFromInterval(25,32);
+let randomSectionNumber = randomIntFromInterval(15,23);
+let divs = [];
 //let row = document.querySelector("section:first-child");
 let row;
 let div;
+
+let indexI = randomIntFromInterval(0,randomDivsNumber-1);
+let indexJ = randomIntFromInterval(0,randomSectionNumber-1);
+
 for(let j=0;j<randomSectionNumber;j++) {
+    divs[j] = [];
     row = document.createElement("section");
     document.body.appendChild(row);
     for (let i = 0; i < randomDivsNumber; i++) {
-        div = document.createElement("div");
+        if(i === indexI && j === indexJ){
+            div = document.createElement("a");
+        } else{
+            div = document.createElement("div");
+        }
         row.appendChild(div);
         divs[j][i] = div;
-        if (j == 0) {
-            fetch(cors + api, {mode: "cors"})
+        if (j === 0) {
+            fetch(cors + dogAPI, {mode: "cors"})
                 .then(
                     function (response) {
                         // Examine the text in the response
@@ -73,12 +101,25 @@ for(let j=0;j<randomSectionNumber;j++) {
 }
 
 window.setTimeout(function wait () {
-    if (images.length == randomDivsNumber) {
+    if (images.length === randomDivsNumber) {
+        alert("Quick find the cat !");
+        for(let j=0; j<randomSectionNumber;j++){
+            if(j !== 0){
+                images = shuffle(images);
+            }
+            for(let i=0;i<randomDivsNumber;i++){
+                divs[j][i].style.width="calc(100%/"+randomDivsNumber;
+                divs[j][i].style.height ="calc(100vh/"+randomSectionNumber;
+                if(i === indexI && j === indexJ){
+                    divs[j][i].style.backgroundImage = 'url("'+catImage+'")';
+                    divs[j][i].setAttribute("href","catfound.html?url="+catImage);
+                } else{
+                    divs[j][i].style.backgroundImage = 'url("'+images[i]+'")';
 
-        for(let i=0;i<randomDivsNumber;i++){
-            divs[i].style.width="calc(100%/"+randomDivsNumber;
-            divs[i].style.backgroundImage = 'url("'+images[i]+'")';
+                }
+            }
         }
+
     } else {
         window.setTimeout(wait, 10);
     }

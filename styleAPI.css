@@ -18,9 +18,31 @@ body{
 img{
     display:inline-block;
 }
-div{
+div, a{
     background-size: cover;
     background-position: center;
-    height:30px;
     display:inline-block;
+    font-size: 0;
+    margin:0;
+    padding:0;
+}
+a{
+    animation: glox ease 500ms infinite;
+}
+section{
+    font-size: 0;
+    margin:0;
+    padding:0;
+}
+
+@keyframes glox{
+    0%{
+      transform:scale(1);
+    }
+    50%{
+        transform:scale(1.5);
+    }
+    100%{
+        transform:scale(1);
+    }
 }
