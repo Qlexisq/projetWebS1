@@ -19,15 +19,16 @@ img{
     display:inline-block;
 }
 div, a{
-    background-size: cover;
+    background-size: contain;
     background-position: center;
+    background-repeat: repeat;
     display:inline-block;
     font-size: 0;
     margin:0;
     padding:0;
 }
 a{
-    animation: glox ease 500ms infinite;
+    /*animation: glox ease 500ms infinite;*/
 }
 section{
     font-size: 0;

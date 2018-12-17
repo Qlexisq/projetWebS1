@@ -1,0 +1,75 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: fuchsia;
+    color: yellow;
+    font-family: 'Comic Sans MS', 'calibri', cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+form{
+    width:100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+}
+input{
+    display: inline-block;
+    width:20%;
+    height:50px;
+    border:none;
+}
+img{
+    width:30%;
+    border-radius:50px;
+    margin:30px;
+}
+h1{
+    text-shadow:
+            -5px -5px 0 #00F,
+            5px -5px 0 #00F
+
+}
+div{
+    width:100%;
+}
+
+#ball{
+    height:50px;
+    width:50px;
+    background: url("ball.png") center;
+    background-size : cover;
+    position:relative;
+    top:100px;
+    left:-25px;
+    /*animation: ball ease 5s infinite;
+    animation-delay: 2s;*/
+}
+
+@keyframes ball{
+    0%{
+        top:100px;
+        left:-25px;
+
+    }
+    25%{
+        top:-200px;
+    }
+    50%{
+        left:1200px;
+    }
+    100%{
+        left:1200px;
+        top:-200px;
+    }
+
+}

@@ -31,7 +31,7 @@ function randomIntFromInterval(min,max) {
 let dogAPI = "https://dog.ceo/api/breeds/image/random";
 let catAPI = "https://api.thecatapi.com/v1/images/search?mime_types=jpg,png";
 let cors = "https://shielded-sea-59072.herokuapp.com/";
-let catImage;
+let catImage = "";
 fetch(cors + catAPI, {mode: "cors"})
     .then(
         function (response) {
@@ -101,7 +101,7 @@ for(let j=0;j<randomSectionNumber;j++) {
 }
 
 window.setTimeout(function wait () {
-    if (images.length === randomDivsNumber) {
+    if (images.length === randomDivsNumber && catImage !== "" ) {
         alert("Quick find the cat !");
         for(let j=0; j<randomSectionNumber;j++){
             if(j !== 0){
