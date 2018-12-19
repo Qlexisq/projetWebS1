@@ -1,0 +1,21 @@
+#laser{
+    width:10px;
+    height:10px;
+    border-radius: 50%;
+    background-color: red;
+    position:absolute;
+    top : 25px;
+    left:-5px;
+    transition : all 0.3s ease;
+}
+#container{
+    position:relative;
+    top : -20px;
+    transition : all 0.3s ease;
+}
+body{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+}

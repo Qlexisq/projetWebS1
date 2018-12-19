@@ -1,0 +1,70 @@
+body{
+    background-color: mediumspringgreen;
+}
+.title{
+    text-align: center;
+}
+.flex{
+    display:flex;
+}
+.flex-colwrap{
+    flex-flow: column wrap;
+}
+.flex-rowrap{
+    flex-flow: row wrap;
+}
+.flex-c-c{
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    font-family: 'Great Vibes', cursive;
+    margin-top:40px;
+    color: purple;
+    font-size: 3rem;
+}
+h2{
+    margin-top: 20px;
+    font-family: 'Comic Sans MS';
+}
+#imgBreed{
+    margin-bottom:20px;
+    border-radius:50px;
+    width:30%;
+}
+form{
+    margin:20px 0px;
+}
+#choice{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    padding:10px 70px;
+    line-height: 30px;
+    font-size: 1.5rem;
+    text-align: center;
+    border-radius: 30px;
+    border:none;
+    background: #fff url("../imgs/uglyArrow.png") no-repeat 95% 50%;
+    background-size: 10%;
+}
+.wrapper{
+    width:90%;
+    margin:0 auto;
+}
+.wrapper img{
+    width:10%;
+}
+.name{
+    text-align: center;
+}
+.path{
+    background-color: white;
+    height:20px;
+    width:90%;
+}
+img{
+    position:relative;
+    transition: all 0.1s ease;
+}

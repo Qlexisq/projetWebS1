@@ -1,0 +1,22 @@
+body {	
+	font-family: 'Monaco', monospace;
+	background-color: white;
+}
+
+#site-title{
+	color: white;
+	background-color: black;
+	display : flex;
+	justify-content : center;
+    align-items : center;
+}
+
+.onglet{
+	color: white;
+	background-color: black;
+	margin-top: 15%;
+}
+
+#ascii{
+	margin-top: 10%;
+}

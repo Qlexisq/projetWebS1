@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/loader.css">
+
+<title>¿About?</title>
+</head>
+<body onload="myFunction()" style="margin:0;">
+
+<div id="loader"></div>
+
+<div style="display:none;" id="myDiv" class="animate-bottom">
+  <h1>Asshole.</h1>
+</div>
+
+<script>
+let myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 100000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+
+</body>
+</html>

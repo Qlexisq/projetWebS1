@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Home Page Motherfuc*er</title>
+		<link rel="stylesheet" href="../css/normalize.css"/>
+		<link rel="stylesheet" href="../css/styleIndex.css"/>
+		<link rel="stylesheet" href="../css/loader.css"/>
+	</head>
+	<STYLE>A{text-decoration: none;}</STYLE>
+	<body onload="myFunction()" style="margin:0;">
+		<div id="loader"></div>
+		<div style="display:none;" id="content">
+			<pre id="ascii"><p style="text-align:center">
+      ___           ___           ___           ___           ___           ___           ___           ___     
+     /\__\         /\  \         /\__\         /\  \         /\  \         /\  \         /\  \         /\  \    
+    /:/  /        /::\  \       /::|  |       /::\  \       /::\  \       /::\  \       /::\  \       /::\  \   
+   /:/__/        /:/\:\  \     /:|:|  |      /:/\:\  \     /:/\:\  \     /:/\:\  \     /:/\:\  \     /:/\:\  \  
+  /::\  \ ___   /:/  \:\  \   /:/|:|__|__   /::\~\:\  \   /::\~\:\  \   /::\~\:\  \   /:/  \:\  \   /::\~\:\  \ 
+ /:/\:\  /\__\ /:/__/ \:\__\ /:/ |::::\__\ /:/\:\ \:\__\ /:/\:\ \:\__\ /:/\:\ \:\__\ /:/__/_\:\__\ /:/\:\ \:\__\
+ \/__\:\/:/  / \:\  \ /:/  / \/__/~~/:/  / \:\~\:\ \/__/ \/__\:\/:/  / \/__\:\/:/  / \:\  /\ \/__/ \:\~\:\ \/__/
+      \::/  /   \:\  /:/  /        /:/  /   \:\ \:\__\        \::/  /       \::/  /   \:\ \:\__\    \:\ \:\__\  
+      /:/  /     \:\/:/  /        /:/  /     \:\ \/__/         \/__/        /:/  /     \:\/:/  /     \:\ \/__/  
+     /:/  /       \::/  /        /:/  /       \:\__\                       /:/  /       \::/  /       \:\__\    
+     \/__/         \/__/         \/__/         \/__/                       \/__/         \/__/         \/__/    
+
+			</pre>
+			<h1 id="site-title">A dog is a dog, It's not a cat.</h1>
+			<div id="description">
+				<a id="laser-game" class="onglet" href="laser.html"><p style="text-align:center">[ Catch me ]</a>
+				<a id="mayhem-game" class="onglet" href="mayhem.html"><p style="text-align:center">[ Mayhem ]</a>
+				<a id="fetch-game" class="onglet" href="fetch.html"><p style="text-align:center">[ Let's fetch ]</a>
+                <a id="race-game" class="onglet" href="race.html"><p style="text-align:center">[ Race ]</a>
+				<a id="description-text" class="onglet" href="about.html"><p style="text-align:center">[ About ]</a>
+			</div>
+		</div>
+		<script>
+			let myVar;
+
+			function myFunction() {
+ 		 		myVar = setTimeout(showPage, 100);
+			}
+
+			function showPage() {
+				document.getElementById("loader").style.display = "none";
+				document.getElementById("content").style.display = "block";
+			}
+		</script>
+	</body>
+</html>
