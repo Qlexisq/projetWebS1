@@ -2,7 +2,7 @@ let i = 1;
 function destruction(){
     if(i>0){
         this.style.opacity = i;
-        this.style.animation = "shake 0.1s linear 1";
+        this.style.animation = "shake 0.1s linear infinite";
         i = i - 0.01;
     } else{
         this.style.display="none";
