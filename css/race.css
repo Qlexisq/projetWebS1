@@ -23,9 +23,9 @@ h1{
     color: purple;
     font-size: 3rem;
 }
-h2{
+h2, .name{
     margin-top: 20px;
-    font-family: 'Comic Sans MS';
+    font-family: 'Comic Sans MS', arial;
 }
 #imgBreed{
     margin-bottom:20px;
@@ -68,3 +68,42 @@ img{
     position:relative;
     transition: all 0.1s ease;
 }
+.container{
+    position:relative;
+}
+.rank{
+    position:absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(-35deg);
+    left:0;
+    font-size: 2rem;
+    color:yellow;
+    transform-origin: center;
+}
+#start{
+    display: block;
+    margin:50px auto;
+    width:20%;
+}
+
+@keyframes rotateBlink{
+    from {
+        opacity:0;
+        transform: rotate(-35deg);
+    }
+    25%{
+        opacity:1;
+    }
+    50%{
+        opacity:0;
+        transform: rotate(35deg);
+    }
+    75%{
+        opacity: 1;
+    }
+    to{
+        opacity:0;
+        transform: rotate(-35deg);
+    }
+}
+

@@ -5,13 +5,18 @@
     <title>Title</title>
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/race.css">
+    <link rel="stylesheet" href="../css/loader.css">
     <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
 
 </head>
 <body>
+<div id="loader"></div>
+
+<div style="display:none;" id="cover" class="animate-bottom">
     <h1 class="title"> Doggo Race Woof Woof</h1>
-    <h2 class="title"> Choose your dog breed </h2>
+
     <form class="flex flex-c-c flex-colwrap" action="" method="">
+        <h2 class="title"> Choose your dog breed </h2>
         <!--<img id="imgBreed" class="doggo" src="" alt="">-->
         <select id="choice">
         </select>
@@ -20,41 +25,41 @@
         <div class="lane">
             <p class="name">YOUR DOG</p>
             <div class="container flex flex-rowrap flex-c-c">
-                <img class="doggo" src="">
+                <div class="rank"></div><img class="doggo" src="../imgs/doge.png">
                 <div class="path"></div>
             </div>
         </div>
         <div class="lane">
             <p class="name">BAD DOG #1</p>
             <div class="container flex flex-rowrap flex-c-c">
-                <img class="contender" src="">
+                <div class="rank"></div><img class="contender" src="">
                 <div class="path"></div>
             </div>
         </div>
         <div class="lane">
             <p class="name">BAD DOG #2</p>
             <div class="container flex flex-rowrap flex-c-c">
-                <img class="contender" src="">
+                <div class="rank"></div><img class="contender" src="">
                 <div class="path"></div>
             </div>
         </div>
         <div class="lane">
             <p class="name">BAD DOG #3</p>
             <div class="container flex flex-rowrap flex-c-c">
-                <img class="contender" src="">
+                <div class="rank"></div><img class="contender" src="">
                 <div class="path"></div>
             </div>
         </div>
-        <div class="lane">
+        <!--<div class="lane">
             <p class="name">BAD DOG #4</p>
             <div class="container flex flex-rowrap flex-c-c">
-                <img class="contender" src="">
+                <div class="rank"></div><img class="contender" src="">
                 <div class="path"></div>
             </div>
-        </div>
-        <input id="start" type="submit" value="go !!">
+        </div>-->
+        <input id="start" type="submit" value="LET'S RACE !!">
     </div>
-
+</div>
     <script type="text/javascript" src="../js/race.js"></script>
 </body>
 </html>

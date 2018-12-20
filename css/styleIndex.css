@@ -20,3 +20,23 @@ body {
 #ascii{
 	margin-top: 10%;
 }
+#content{
+    transition:all 1s ease-in;
+}
+#void{
+    display:none;
+    text-align: center;
+    font-size: 3rem;
+    color:red;
+    font-weight: 900;
+}
+
+@media screen and (max-width:768px) {
+    /* WOW EVERYTHING IS UPSIDE DOWN */
+    #content{
+        transform:rotate(180deg);
+    }
+    #void{
+        display:block;
+    }
+}

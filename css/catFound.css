@@ -1,0 +1,31 @@
+body{
+    background-color:purple;
+}
+#wrapper{
+    width:90%;
+    text-align: center;
+    margin:0 auto;
+}
+p{
+    font-size:3rem;
+    color:pink;
+    font-family: "Comic Sans MS";
+}
+img{
+    border-radius:30px;
+    width:30%;
+    margin:20px auto;
+    transform-origin: bottom center;
+}
+@keyframes shake {
+    from{
+        transform: rotate(2deg);
+    }
+    50%{
+        transform: rotate(-2deg);
+    }
+    to{
+        transform: rotate(2deg);
+    }
+
+}

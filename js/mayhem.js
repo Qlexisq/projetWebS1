@@ -69,7 +69,7 @@ for(let j=0;j<randomSectionNumber;j++) {
     divs[j] = [];
     //Creation d'une ligne
     row = document.createElement("section");
-    document.body.appendChild(row);
+    document.querySelector("#wrapper").appendChild(row);
     for (let i = 0; i < randomDivsNumber; i++) {
         //Si c'est le moment pour mettre la photo chat, on crée un lien pour la rendre cliquable, sinon blc
         if(i === indexI && j === indexJ){
@@ -101,7 +101,6 @@ for(let j=0;j<randomSectionNumber;j++) {
 //setInterval qui vérifie à voir si on a bien toutes les photos et si oui setup la mosaïque
 let id = window.setInterval(function() {
     if (images.length === randomDivsNumber && readyCat) {
-        alert("Quick find the cat !");
         for(let j=0; j<randomSectionNumber;j++){
             if(j !== 0){
                 images = shuffle(images);
@@ -120,6 +119,12 @@ let id = window.setInterval(function() {
                 }
             }
         }
+        //on espère que les photos chargeront en bg en moins d'1s ahaha
+        setTimeout(function(){
+            alert("Quick find the cat !");
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("wrapper").style.display = "block";
+        },1000)
         clearInterval(id);
 
     }

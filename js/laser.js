@@ -3,8 +3,20 @@
 function randomIntFromInterval(min,max) {
     return Math.floor(Math.random()*(max-min+1)+min);
 }
+let i = 0;
+let txt = "You finally grab the laser but nothing happens. You're a dog, not a cat !! You back off the computer slowly as you start questioning your existence as a dog";
+let speed = 50;
+
+function typeWriter() {
+    if (i < txt.length) {
+        document.body.innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+    }
+}
 function congrats(){
-    alert("Damn you strong");
+    document.querySelector("#container").style.display="none";
+    typeWriter();
 }
 //merveilleux tableau d'insultes qui servira au petit point rouge
 let insultArray = ["u suck", "ahaha u so bad", "too easy", "noob", "dumbass", "give up already", "boring"];
