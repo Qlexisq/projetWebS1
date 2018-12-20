@@ -82,6 +82,7 @@ function raceStart(){
         if(positionsArray.every(isArrived)){
             setTimeout(function(){
                 for(let i=0;i<imgs.length;i++){
+                    rankDivs[i].innerHTML = "";
                     imgs[i].style.left = "0";
                     imgs[i].style.animation="";
                 }

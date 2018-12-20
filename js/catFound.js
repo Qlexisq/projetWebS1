@@ -2,7 +2,7 @@ let i = 1;
 function destruction(){
     if(i>0){
         this.style.opacity = i;
-        this.style.animation = "shake 0.1s linear infinite";
+        this.style.animation = "shake 0.1s linear 1";
         i = i - 0.01;
     } else{
         this.style.display="none";
@@ -18,7 +18,7 @@ let tab = url.split("=");
 let catImage = tab[1];
 //destruction compteur
 
-let img = document.querySelector("img")
+let img = document.querySelector("img");
 img.setAttribute("src",catImage);
 img.addEventListener("click",destruction);
 
